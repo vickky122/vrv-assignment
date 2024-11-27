@@ -44,6 +44,7 @@ Fully responsive layout for desktop, tablet, and mobile devices.
 
 
 ## You can access the deployed application here. 
+https://vrv-assignment-kohl.vercel.app/ 
 
 #### Technologies Used
 Frontend Framework: React (with Vite)
