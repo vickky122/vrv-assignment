@@ -48,14 +48,22 @@ https://vrv-assignment-kohl.vercel.app/
 
 #### Technologies Used
 Frontend Framework: React (with Vite)
+
 Styling: Tailwind CSS (or custom CSS)
+
 State Management: React Hooks
+
 API Simulation: Mock API
+
 Tooling: Node.js, npm
+
 Future Enhancements
+
 Implement real backend integration.
+
 Add authentication and authorization mechanisms.
+
 Include advanced filtering, sorting, and search features.
+
 Improve UI animations and accessibility.
 
-# Feel free to fork the repository and submit pull requests for improvements. Contributions are always welcome!
