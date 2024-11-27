@@ -1,35 +1,62 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, NavLink } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import Users from "./pages/Users";
+import Roles from "./pages/Roles";
+import Permissions from "./pages/Permissions";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      <div className="flex">
+        <nav className="w-1/4 bg-gray-800 text-white min-h-screen p-4">
+          <h2 className="text-xl font-bold mb-4">RBAC System</h2>
+          <ul>
+            <li className="mb-2">
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? "font-bold" : "")}
+              >
+                Dashboard
+              </NavLink>
+            </li>
+            <li className="mb-2">
+              <NavLink
+                to="/users"
+                className={({ isActive }) => (isActive ? "font-bold" : "")}
+              >
+                Users
+              </NavLink>
+            </li>
+            <li className="mb-2">
+              <NavLink
+                to="/roles"
+                className={({ isActive }) => (isActive ? "font-bold" : "")}
+              >
+                Roles
+              </NavLink>
+            </li>
+            <li className="mb-2">
+              <NavLink
+                to="/permissions"
+                className={({ isActive }) => (isActive ? "font-bold" : "")}
+              >
+                Permissions
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+        <div className="w-3/4 p-4">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/users" element={<Users />} />
+            <Route path="/roles" element={<Roles />} />
+            <Route path="/permissions" element={<Permissions />} />
+          </Routes>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </Router>
+  );
+};
 
-export default App
+export default App;
