@@ -1,35 +1,23 @@
-##Role-Based Access Control (RBAC) UI
+####Role-Based Access Control (RBAC) UI
 This project is a Role-Based Access Control (RBAC) system, designed to help administrators efficiently manage users, roles, and permissions. The application provides an intuitive and secure interface for user management, role assignment, and permission configuration.
 
-Project Description
+###Project Description
 The RBAC UI is an admin dashboard for managing user accounts, assigning roles, and configuring permissions. The interface is built with React Vite, offering a clean and responsive design that adapts seamlessly to various devices. The mock API simulates server-side CRUD operations, making it easy to test functionality.
 
-Setup Instructions
-Clone the Repository
-
-bash
-Copy code
+##Setup Instructions
+#Clone the Repository
 [git clone <repository-url>](https://github.com/vickky122/vrv-assignment.git)
 cd rbac-ui
-Install Dependencies Make sure you have Node.js and npm installed. Then, run:
-
-bash
-Copy code
+Install Dependencies Make sure you have Node.js and npm installed. 
+Then, run:
 npm install
 Run the Development Server Start the application locally:
-
-bash
-Copy code
 npm run dev
 Access the Application Open your browser and navigate to:
 
-arduino
-Copy code
 http://localhost:5173
 Build for Production (Optional) To create a production-ready build, run:
 
-bash
-Copy code
 npm run build
 Features List
 1. Dashboard
