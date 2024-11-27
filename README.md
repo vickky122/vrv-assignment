@@ -6,7 +6,7 @@ The RBAC UI is an admin dashboard for managing user accounts, assigning roles, a
 
 ### Setup Instructions
 #### Clone the Repository
-[git clone (https://github.com/vickky122/vrv-assignment.git)]
+[git clone https://github.com/vickky122/vrv-assignment.git]
 
 cd rbac-ui
 
