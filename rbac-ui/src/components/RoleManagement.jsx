@@ -16,33 +16,39 @@ const RoleManagement = () => {
   };
 
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-bold mb-4">Role Management</h2>
-      <div className="mb-4">
-        <input
-          type="text"
-          placeholder="Enter role name"
-          value={newRole}
-          onChange={(e) => setNewRole(e.target.value)}
-          className="border p-2 mr-2"
-        />
-        <button onClick={addRole} className="bg-green-500 text-white p-2">
-          Add Role
-        </button>
+    <div className="p-6">
+      <h1 className="text-3xl font-bold mb-6">Role Management</h1>
+      <div className="bg-white p-6 rounded-lg shadow-lg">
+        <h2 className="text-xl font-semibold mb-4">Manage Roles</h2>
+        <div className="mb-4">
+          <input
+            type="text"
+            value={newRole}
+            onChange={(e) => setNewRole(e.target.value)}
+            placeholder="Enter new role"
+            className="border p-2 rounded"
+          />
+          <button
+            onClick={addRole}
+            className="bg-green-500 text-white p-2 rounded ml-2"
+          >
+            Add Role
+          </button>
+        </div>
+        <ul>
+          {roles.map((role) => (
+            <li key={role.id} className="flex justify-between py-2">
+              <span>{role.name}</span>
+              <button
+                onClick={() => deleteRole(role.id)}
+                className="bg-red-500 text-white p-2 rounded"
+              >
+                Delete
+              </button>
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul>
-        {roles.map((role) => (
-          <li key={role.id} className="mb-2 flex justify-between items-center">
-            {role.name}
-            <button
-              onClick={() => deleteRole(role.id)}
-              className="bg-red-500 text-white p-1"
-            >
-              Delete
-            </button>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };
